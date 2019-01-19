@@ -1,0 +1,15 @@
+load("@rules_foreign_cc//tools/build_defs:boost_build.bzl", "boost_build")
+
+boost_build(
+    name = "boost_graph",
+    lib_source = "@boost//:all",
+    user_options = ["--with-graph"],
+    visibility = ["//visibility:public"],
+)
+
+boost_build(
+    name = "boost_python",
+    lib_source = "@boost//:all",
+    user_options = ["--with-python"],
+    visibility = ["//visibility:public"],
+)
